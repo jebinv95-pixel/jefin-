@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VK GROUPS | Premium House Construction, Kanyakumari</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #fbf9f4;
+      --bg-alt: #f5f3ee;
+      --surface: #ffffff;
+      --surface-2: #f0eee9;
+      --tile: #eae8e3;
+      --ink: #1b1c19;
+      --body: #444748;
+      --gold: #745a29;
+      --gold-light: #fedb9d;
+      --gold-pale: #ffdea6;
+      --gold-soft: #e4c286;
+      --cream: #fbf9f4;
+      --cream-soft: #e4e2dd;
+      --charcoal: #1c1b1b;
+      --muted: #858383;
+      --serif: 'Playfair Display', Georgia, serif;
+      --sans: 'Plus Jakarta Sans', system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { background: var(--bg); color: var(--body); font-family: var(--sans); line-height: 1.6; -webkit-font-smoothing: antialiased; }
+    img { display: block; max-width: 100%; }
+    a { color: inherit; text-decoration: none; }
+
+    .container { max-width: 1280px; margin: 0 auto; padding: 0 48px; }
+    .eyebrow { font-size: 11px; font-weight: 600; letter-spacing: 1.1px; text-transform: uppercase; color: var(--gold); }
+    .h2 { font-family: var(--serif); font-weight: 400; font-size: 48px; line-height: 1.2; letter-spacing: -0.48px; color: var(--ink); }
+    .h2 em { display: block; font-style: italic; color: var(--gold); }
+    .h3 { font-family: var(--serif); font-weight: 500; font-size: 24px; line-height: 1.35; letter-spacing: 0.24px; color: var(--ink); }
+    .h4 { font-family: var(--sans); font-weight: 600; font-size: 18px; line-height: 1.4; letter-spacing: 0.36px; color: var(--ink); }
+    .small { font-size: 14px; line-height: 1.6; letter-spacing: 0.14px; }
+
+    .btn { display: inline-flex; align-items: center; gap: 12px; padding: 16px 32px; border-radius: 4px; border: 0; cursor: pointer;
+      font-family: var(--sans); font-weight: 600; font-size: 12px; letter-spacing: 1.2px; text-transform: uppercase; transition: transform .2s; }
+    .btn:hover { transform: translateY(-2px); }
+    .btn-gold { background: var(--gold-light); color: #271900; box-shadow: 0 10px 15px -3px rgba(0,0,0,.1), 0 4px 6px -4px rgba(0,0,0,.1); }
+    .btn-glass { background: rgba(251,249,244,.1); color: var(--cream); backdrop-filter: blur(12px); }
+    .btn-glass-strong { background: rgba(251,249,244,.15); color: var(--cream); backdrop-filter: blur(12px); }
+    .btn-black { background: #000; color: #fff; box-shadow: 0 4px 6px -1px rgba(0,0,0,.1); }
+    .ico12 { width: 12px; height: 12px; }
+
+    /* 1. HERO */
+    .hero { position: relative; min-height: 736px; overflow: hidden; display: flex; align-items: center; justify-content: center; }
+    .hero-bg { position: absolute; inset: 0; }
+    .hero-bg img { width: 100%; height: 100%; object-fit: cover; }
+    .hero-scrim { position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,.95) 0%, rgba(0,0,0,.65) 50%, rgba(0,0,0,.4) 100%); }
+    .hero-grid { position: absolute; inset: 0; max-width: 1280px; margin: 0 auto; display: flex; justify-content: space-between; padding: 0 48px; opacity: .15; pointer-events: none; }
+    .hero-grid span { width: 1px; height: 100%; background: var(--gold-pale); }
+    .hero-content { position: relative; z-index: 2; max-width: 1024px; padding: 96px 48px; display: flex; flex-direction: column; align-items: center; text-align: center; }
+    .tag { display: inline-flex; align-items: center; gap: 12px; margin-bottom: 32px; padding: 8px 20px; border-radius: 12px;
+      background: rgba(251,249,244,.1); backdrop-filter: blur(12px); box-shadow: 0 1px 2px rgba(0,0,0,.05); }
+    .tag .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--gold-light); }
+    .tag span { font-size: 12px; font-weight: 600; letter-spacing: 1.2px; text-transform: uppercase; color: var(--cream); }
+    .hero h1 { font-family: var(--serif); font-weight: 400; font-size: 72px; line-height: 1.1; letter-spacing: -1.44px; color: var(--cream); }
+    .hero h1 em { display: block; font-style: italic; color: var(--gold-soft); }
+    .hero .sub { margin-top: 24px; max-width: 672px; font-family: var(--serif); font-size: 24px; line-height: 1.35; letter-spacing: .6px; color: #eae8e3; }
+    .hero .narr { margin: 24px 0 48px; font-weight: 300; font-size: 18px; line-height: 1.6; letter-spacing: .18px; color: var(--cream-soft); max-width: 720px; }
+    .cta-row { display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; }
+    .scroll-ind { margin-top: 64px; display: flex; flex-direction: column; align-items: center; gap: 8px; opacity: .8; }
+    .scroll-ind small { font-size: 11px; font-weight: 500; letter-spacing: 1.1px; text-transform: uppercase; color: var(--cream-soft); }
+    .scroll-ind .track { width: 20px; height: 36px; padding: 4px; border-radius: 12px; background: rgba(251,249,244,.1); display: flex; justify-content: center; }
+    .scroll-ind .track span { width: 6px; height: 10px; border-radius: 12px; background: var(--gold-pale); }
+
+    /* sections */
+    .section { padding: 112px 0; }
+    .section-alt { background: var(--bg-alt); padding: 112px 0; }
+    .split-head { display: flex; justify-content: space-between; align-items: flex-end; gap: 48px; flex-wrap: wrap; }
+    .split-head .left { max-width: 672px; display: flex; flex-direction: column; gap: 11px; }
+    .split-head .right { max-width: 448px; }
+    .split-head .right p { font-size: 16px; line-height: 26px; }
+
+    /* 2. PILLARS */
+    .pillars { display: grid; grid-template-columns: repeat(4, 1fr); gap: 32px; margin-top: 80px; }
+    .pillar { background: var(--surface); border-radius: 8px; padding: 32px; display: flex; flex-direction: column; justify-content: space-between; box-shadow: 0 1px 1px rgba(0,0,0,.05); }
+    .icon-box { width: 56px; height: 56px; border-radius: 4px; background: var(--surface-2); display: flex; align-items: center; justify-content: center; }
+    .icon-box img { max-width: 24px; height: auto; }
+    .pillar .eyebrow { display: block; margin-top: 24px; }
+    .pillar .h3 { margin: 8px 0 4px; }
+    .pillar-foot { margin-top: 32px; padding-top: 16px; display: flex; align-items: center; gap: 8px; }
+    .pillar-foot .eyebrow { font-weight: 500; letter-spacing: .55px; display: inline; margin: 0; }
+    .pillar-foot img { width: 13px; height: 13px; }
+
+    /* 3. EXPERIENCE */
+    .split-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
+    .exp-text h2 { margin: 12px 0 32px; }
+    .exp-text p { font-size: 16px; line-height: 26px; margin-bottom: 16px; }
+    .tiles { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 40px; }
+    .tile { background: var(--tile); border-radius: 4px; padding: 20px; }
+    .tile .num { font-size: 11px; font-weight: 700; letter-spacing: 1.1px; color: var(--gold); }
+    .tile .h4 { margin: 4px 0; }
+    .tile .small { font-size: 14px; line-height: 21px; }
+    .exp-image { position: relative; }
+    .exp-image .frame { position: relative; border-radius: 8px; overflow: hidden; aspect-ratio: 16/11; box-shadow: 0 20px 25px -5px rgba(0,0,0,.1), 0 8px 10px -6px rgba(0,0,0,.1); }
+    .exp-image .frame img { width: 100%; height: 100%; object-fit: cover; }
+    .exp-image .frame::after { content: ""; position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,.6), transparent 60%); }
+    .badge { position: absolute; left: -32px; bottom: 40px; max-width: 384px; background: #000; color: var(--cream); padding: 32px; border-radius: 8px; box-shadow: 0 25px 50px -12px rgba(0,0,0,.25); z-index: 2; }
+    .badge-top { display: flex; gap: 12px; align-items: center; margin-bottom: 7px; }
+    .badge-top img { width: 21px; height: auto; }
+    .badge-top span { font-size: 11px; font-weight: 500; letter-spacing: 1.1px; text-transform: uppercase; color: var(--gold-pale); }
+    .badge h4 { font-size: 18px; font-weight: 500; letter-spacing: .36px; line-height: 1.4; margin-bottom: 8px; color: var(--cream); }
+    .badge p { font-size: 14px; line-height: 21px; color: var(--muted); }
+
+    /* 4. PORTFOLIO */
+    .projects { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; margin-top: 64px; }
+    .project { background: var(--surface); border-radius: 8px; overflow: hidden; box-shadow: 0 1px 2px rgba(0,0,0,.05); display: flex; flex-direction: column; justify-content: space-between; }
+    .project-img { position: relative; height: 256px; overflow: hidden; }
+    .project-img img { width: 100%; height: 100%; object-fit: cover; }
+    .chip-completed { position: absolute; top: 16px; right: 16px; background: rgba(0,0,0,.8); backdrop-filter: blur(12px); color: var(--cream); padding: 4px 12px; border-radius: 2px; font-size: 11px; font-weight: 500; letter-spacing: .55px; text-transform: uppercase; }
+    .project-body { padding: 32px 32px 24px; }
+    .loc { display: flex; align-items: center; gap: 8px; }
+    .loc img { width: 11px; height: 13px; }
+    .project h3 { margin: 8px 0 4px; }
+    .project p.small { margin-bottom: 16px; }
+    .tags { display: flex; flex-wrap: wrap; gap: 8px; }
+    .tags span { background: var(--surface-2); padding: 4px 12px; border-radius: 2px; font-size: 11px; font-weight: 500; letter-spacing: .55px; text-transform: uppercase; color: var(--body); }
+    .view-link { display: inline-flex; align-items: center; gap: 12px; padding: 0 32px 32px; font-size: 12px; font-weight: 600; letter-spacing: 1.2px; text-transform: uppercase; color: var(--ink); }
+    .view-link img { width: 12px; height: 12px; }
+
+    /* 5. ONGOING */
+    .ongoing { display: grid; grid-template-columns: 5fr 7fr; gap: 48px; align-items: center; }
+    .ongoing .left .eyebrow { display: block; margin-bottom: 20px; }
+    .ongoing .left h2 { margin-bottom: 24px; }
+    .ongoing .left > p { font-size: 16px; line-height: 26px; margin-bottom: 40px; }
+    .checks { background: var(--surface-2); border-radius: 8px; padding: 40px 24px 24px; display: flex; flex-direction: column; gap: 16px; margin-bottom: 40px; }
+    .check { display: flex; gap: 16px; align-items: flex-start; }
+    .check img { width: 18px; height: auto; margin-top: 4px; }
+    .check .h4 { font-size: 18px; margin-bottom: 4px; }
+    .check .small { font-size: 14px; line-height: 21px; }
+    .progress-card { background: var(--surface); border-radius: 16px; padding: 24px; box-shadow: 0 20px 25px -5px rgba(0,0,0,.1), 0 8px 10px -6px rgba(0,0,0,.1); display: flex; flex-direction: column; gap: 24px; }
+    .progress-img { position: relative; border-radius: 8px; overflow: hidden; height: 389px; }
+    .progress-img img { width: 100%; height: 100%; object-fit: cover; }
+    .live-tag { position: absolute; top: 16px; left: 16px; background: rgba(0,0,0,.8); backdrop-filter: blur(12px); display: flex; align-items: center; gap: 8px; padding: 6px 16px; border-radius: 12px; }
+    .live-tag i { width: 8px; height: 8px; border-radius: 50%; background: var(--gold-pale); }
+    .live-tag span { font-size: 11px; font-weight: 500; letter-spacing: 1.1px; text-transform: uppercase; color: var(--gold-pale); }
+    .milestone { position: absolute; left: 16px; right: 16px; bottom: 16px; background: rgba(0,0,0,.9); backdrop-filter: blur(12px); padding: 16px; border-radius: 4px; display: flex; justify-content: space-between; align-items: center; gap: 16px; }
+    .milestone .lbl { font-size: 11px; font-weight: 500; letter-spacing: 1.1px; text-transform: uppercase; color: var(--gold-soft); }
+    .milestone .name { font-size: 18px; font-weight: 500; letter-spacing: .36px; color: var(--cream); }
+    .milestone .pct { text-align: right; }
+    .milestone .pct b { display: block; font-family: var(--serif); font-weight: 600; font-size: 24px; color: var(--gold-pale); }
+    .milestone .pct span { font-size: 11px; font-weight: 500; letter-spacing: .55px; text-transform: uppercase; color: var(--cream-soft); }
+    .progress-meta { padding: 0 8px 8px; }
+    .progress-meta .row { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px; margin-bottom: 8px; }
+    .loc-label { font-size: 12px; font-weight: 600; letter-spacing: 1.2px; text-transform: uppercase; color: var(--gold); }
+
+    /* 6. WHY CHOOSE */
+    .dark { background: var(--charcoal); padding: 112px 0; position: relative; overflow: hidden; }
+    .glow { position: absolute; width: 384px; height: 384px; border-radius: 12px; background: rgba(254,219,157,.05); filter: blur(64px); pointer-events: none; }
+    .glow.tr { top: -160px; right: -160px; }
+    .glow.bl { bottom: -160px; left: -160px; }
+    .dark-head { text-align: center; max-width: 768px; margin: 0 auto 80px; display: flex; flex-direction: column; gap: 11px; align-items: center; position: relative; z-index: 1; }
+    .dark-head .eyebrow { color: var(--gold-pale); }
+    .dark-head h2 { color: var(--cream); }
+    .dark-head h2 em { color: var(--gold-pale); }
+    .dark-head p { color: var(--muted); font-size: 16px; line-height: 26px; }
+    .bento { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; position: relative; z-index: 1; }
+    .feature { background: rgba(251,249,244,.05); border-radius: 8px; padding: 32px; display: flex; flex-direction: column; gap: 8px; }
+    .feature .ico { width: 48px; height: 48px; border-radius: 4px; background: rgba(251,249,244,.1); display: flex; align-items: center; justify-content: center; margin-bottom: 16px; }
+    .feature .ico img { max-width: 22px; height: auto; }
+    .feature .eyebrow { color: var(--gold-pale); font-weight: 500; }
+    .feature h3 { color: var(--cream); margin-top: 4px; }
+    .feature p { color: var(--muted); font-size: 14px; line-height: 22.75px; margin-top: 4px; }
+    .feature.wide { grid-column: span 2; justify-content: space-between; }
+    .feature.wide .foot { display: flex; gap: 16px; align-items: center; padding-top: 24px; flex-wrap: wrap; }
+    .feature.wide .foot span { font-size: 12px; font-weight: 600; letter-spacing: 1.2px; text-transform: uppercase; color: var(--gold-pale); }
+    .feature.wide .foot i { width: 32px; height: 1px; background: var(--gold-pale); }
+
+    /* 7. CTA HERO */
+    .cta-hero { position: relative; overflow: hidden; padding: 128px 0; display: flex; justify-content: center; }
+    .cta-hero .bg { position: absolute; inset: 0; }
+    .cta-hero .bg img { width: 100%; height: 100%; object-fit: cover; }
+    .cta-hero .overlay { position: absolute; inset: 0; background: rgba(0,0,0,.8); backdrop-filter: blur(4px); }
+    .cta-inner { position: relative; z-index: 2; max-width: 896px; padding: 0 48px; text-align: center; display: flex; flex-direction: column; align-items: center; gap: 23px; }
+    .cta-inner h2 { font-family: var(--serif); font-weight: 400; font-size: 72px; line-height: 1.1; letter-spacing: -1.44px; color: var(--cream); }
+    .cta-inner h2 em { display: block; font-style: italic; color: var(--gold-soft); }
+    .cta-inner > p { font-weight: 300; font-size: 18px; line-height: 1.6; color: var(--cream-soft); max-width: 672px; }
+
+    /* 8. LOCATION */
+    .loc-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; }
+    .loc-grid .eyebrow { display: block; margin-bottom: 12px; }
+    .loc-grid h2 { margin-bottom: 24px; }
+    .loc-grid > div > p { font-size: 16px; line-height: 26px; margin-bottom: 24px; }
+    .hubs { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .hub { background: var(--bg-alt); border-radius: 4px; padding: 16px; }
+    .hub img { height: 19px; width: auto; margin-bottom: 8px; }
+    .hub .h4 { font-size: 18px; margin-bottom: 4px; }
+    .hub .small { font-size: 14px; line-height: 21px; }
+    .map-card { background: var(--surface); border-radius: 16px; padding: 24px; box-shadow: 0 10px 15px -3px rgba(0,0,0,.1), 0 4px 6px -4px rgba(0,0,0,.1); display: flex; flex-direction: column; gap: 16px; }
+    .map { position: relative; height: 384px; border-radius: 8px; overflow: hidden; display: flex; align-items: flex-end; padding: 24px; }
+    .map > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+    .map-pin { position: relative; background: rgba(251,249,244,.95); backdrop-filter: blur(12px); padding: 16px; border-radius: 4px; max-width: 320px; }
+    .map-pin .lbl { display: flex; align-items: center; gap: 8px; margin-bottom: 4px; }
+    .map-pin .lbl img { width: 9px; height: 13px; }
+    .map-pin .lbl span { font-size: 11px; font-weight: 600; letter-spacing: .55px; text-transform: uppercase; color: var(--gold); }
+    .map-pin h4 { font-size: 18px; font-weight: 500; letter-spacing: .36px; color: var(--ink); }
+    .map-pin p { font-size: 14px; line-height: 21px; }
+    .map-meta { display: flex; justify-content: space-between; padding: 0 8px; flex-wrap: wrap; gap: 8px; }
+    .map-meta span { font-size: 11px; font-weight: 500; letter-spacing: 1.1px; text-transform: uppercase; color: var(--body); }
+    .map-meta .cape { color: var(--gold); font-weight: 600; }
+
+    /* 9. FORM */
+    .form-section { background: var(--bg-alt); padding: 112px 24px; }
+    .form-card { max-width: 900px; margin: 0 auto; background: var(--surface); border-radius: 16px; padding: 56px; box-shadow: 0 20px 25px -5px rgba(0,0,0,.1), 0 8px 10px -6px rgba(0,0,0,.1); display: flex; flex-direction: column; gap: 48px; }
+    .form-head { text-align: center; display: flex; flex-direction: column; gap: 7px; align-items: center; max-width: 672px; margin: 0 auto; }
+    .form-head h2 { font-size: 48px; }
+    .form-head p { font-size: 16px; line-height: 26px; margin-top: 9px; }
+    form { display: flex; flex-direction: column; gap: 24px; }
+    .fields { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+    .field { display: flex; flex-direction: column; gap: 8px; }
+    .field.full { grid-column: 1 / -1; }
+    .field label { font-size: 11px; font-weight: 500; letter-spacing: 1.1px; text-transform: uppercase; color: var(--body); }
+    .field input { width: 100%; background: var(--bg-alt); border: 1px solid transparent; border-radius: 4px; padding: 16px; font-family: var(--sans); font-size: 16px; color: var(--ink); outline: none; transition: border-color .2s, background .2s; }
+    .field input::placeholder { color: #9ca3af; }
+    .field input:focus { border-color: var(--gold); background: var(--surface); }
+    .form-foot { display: flex; justify-content: space-between; align-items: center; gap: 24px; flex-wrap: wrap; padding-top: 16px; }
+    .privacy { display: flex; align-items: center; gap: 8px; font-size: 11px; font-weight: 500; letter-spacing: 1.32px; color: var(--body); }
+    .privacy img { width: 11px; height: 14px; }
+    .submit { background: var(--gold-light); color: #271900; padding: 16px 40px; border: 0; border-radius: 4px; cursor: pointer; font-family: var(--sans); font-weight: 600; font-size: 12px; letter-spacing: 1.2px; text-transform: uppercase; display: inline-flex; align-items: center; gap: 12px; box-shadow: 0 4px 6px -1px rgba(0,0,0,.1), 0 2px 4px -2px rgba(0,0,0,.1); transition: transform .2s; }
+    .submit:hover { transform: translateY(-2px); }
+    .submit:disabled { opacity: .6; cursor: not-allowed; transform: none; }
+    .submit img { width: 12px; height: 12px; }
+    .status { min-height: 24px; font-size: 14px; text-align: center; }
+    .status.ok { color: #2e7d32; }
+    .status.err { color: #b3261e; }
+
+    footer { background: var(--charcoal); color: var(--muted); text-align: center; padding: 32px 24px; font-size: 13px; }
+    footer strong { color: var(--gold-pale); letter-spacing: 1.2px; text-transform: uppercase; font-weight: 600; }
+
+    /* RESPONSIVE */
+    @media (max-width: 1100px) {
+      .pillars { grid-template-columns: repeat(2, 1fr); }
+      .projects { grid-template-columns: repeat(2, 1fr); }
+      .bento { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 900px) {
+      .container { padding: 0 24px; }
+      .hero h1, .cta-inner h2 { font-size: 52px; }
+      .h2, .form-head h2 { font-size: 36px; }
+      .split-grid, .ongoing, .loc-grid { grid-template-columns: 1fr; gap: 48px; }
+      .badge { left: 16px; right: 16px; max-width: none; bottom: 16px; }
+      .form-card { padding: 32px 24px; }
+    }
+    @media (max-width: 640px) {
+      .section, .section-alt, .dark { padding: 72px 0; }
+      .hero h1, .cta-inner h2 { font-size: 40px; }
+      .hero .sub { font-size: 20px; }
+      .h2, .form-head h2 { font-size: 30px; }
+      .pillars, .projects, .bento, .fields, .hubs, .tiles { grid-template-columns: 1fr; }
+      .feature.wide { grid-column: auto; }
+      .btn { padding: 14px 24px; }
+      .milestone { flex-direction: column; align-items: flex-start; }
+      .milestone .pct { text-align: left; }
+      .form-section { padding: 72px 16px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 1. HERO -->
+  <header class="hero" id="top">
+    <div class="hero-bg"><img alt="" src="https://www.figma.com/api/mcp/asset/7de9645a-dca7-47dc-be61-17cdcd205e93.png" /></div>
+    <div class="hero-scrim"></div>
+    <div class="hero-grid" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
+
+    <div class="hero-content">
+      <div class="tag"><i class="dot"></i><span>VK GROUPS • Premium House Construction</span></div>
+      <h1>Building Dreams.<em>Creating Legacies.</em></h1>
+      <p class="sub">A Beautiful Home Begins With a Vision. We Bring It to Life.</p>
+      <p class="narr">
+        A home is more than walls and a roof. It’s where your dreams take shape, your
+        family grows, and your memories last a lifetime. At VK GROUPS, we turn your
+        vision into thoughtfully crafted homes, combining quality construction,
+        elegant design, and attention to every detail.
+      </p>
+      <div class="cta-row">
+        <a href="#contact" class="btn btn-gold">Start your dream home
+          <img class="ico12" alt="" src="https://www.figma.com/api/mcp/asset/afaaa87a-1dc4-407a-9ae7-09900edfbb78.svg" />
+        </a>
+        <a href="#projects" class="btn btn-glass">Explore our projects
+          <img alt="" src="https://www.figma.com/api/mcp/asset/4215080c-ab59-4c77-ae02-6d65cabe607c.svg" style="width:10.5px;height:15px" />
+        </a>
+      </div>
+      <div class="scroll-ind">
+        <small>Scroll to discover</small>
+        <div class="track"><span></span></div>
+      </div>
+    </div>
+  </header>
+
+  <!-- 2. ACHIEVEMENTS & PHILOSOPHY -->
+  <section class="section-alt">
+    <div class="container">
+      <div class="split-head">
+        <div class="left">
+          <span class="eyebrow">01 / Commitment & Pride</span>
+          <h2 class="h2">Built on Trust.<em>Defined by Quality.</em></h2>
+        </div>
+        <div class="right">
+          <p>Every project is an opportunity to earn trust and create something meaningful. At VK GROUPS, we believe true achievement isn’t just measured by the buildings we construct, but by the confidence our clients place in us and the satisfaction they feel when they see their dream home come to life.</p>
+        </div>
+      </div>
+
+      <div class="pillars">
+        <article class="pillar">
+          <div>
+            <div class="icon-box"><img alt="" src="https://www.figma.com/api/mcp/asset/991a9b54-58ab-454b-98a4-da5b909014e0.svg" /></div>
+            <span class="eyebrow">Standard 01</span>
+            <h3 class="h3">Quality in Every Detail</h3>
+            <p class="small">Uncompromising material selection, precision stone masonry, and handcrafted timber joinery that withstands coastal humidity.</p>
+          </div>
+          <div class="pillar-foot"><span class="eyebrow">Rigorous Execution</span><img alt="" src="https://www.figma.com/api/mcp/asset/4f95825a-c453-468e-ae5a-0ba1b960a796.svg" /></div>
+        </article>
+        <article class="pillar">
+          <div>
+            <div class="icon-box"><img alt="" src="https://www.figma.com/api/mcp/asset/822831a5-9d93-4346-b7db-d364b70e83a9.svg" /></div>
+            <span class="eyebrow">Standard 02</span>
+            <h3 class="h3">Commitment to Every Client</h3>
+            <p class="small">Dedicated project stewardship from initial zoning clearance and soil testing through the final handover of keys.</p>
+          </div>
+          <div class="pillar-foot"><span class="eyebrow">Complete Transparency</span><img alt="" src="https://www.figma.com/api/mcp/asset/4f95825a-c453-468e-ae5a-0ba1b960a796.svg" /></div>
+        </article>
+        <article class="pillar">
+          <div>
+            <div class="icon-box"><img alt="" src="https://www.figma.com/api/mcp/asset/474b6e46-a14a-467c-a9f6-bea605cf1a56.svg" /></div>
+            <span class="eyebrow">Standard 03</span>
+            <h3 class="h3">Thoughtful Design Approach</h3>
+            <p class="small">Harmonizing contemporary spatial luxury with South Indian bioclimatic ventilation, verandas, and sun shading.</p>
+          </div>
+          <div class="pillar-foot"><span class="eyebrow">Bioclimatic Balance</span><img alt="" src="https://www.figma.com/api/mcp/asset/4f95825a-c453-468e-ae5a-0ba1b960a796.svg" /></div>
+        </article>
+        <article class="pillar">
+          <div>
+            <div class="icon-box"><img alt="" src="https://www.figma.com/api/mcp/asset/648049df-76f9-4338-a214-67838540aca5.svg" /></div>
+            <span class="eyebrow">Standard 04</span>
+            <h3 class="h3">Construction Built to Last</h3>
+            <p class="small">Engineered structural resilience with high-grade reinforcement and marine-grade anti-corrosion treatments.</p>
+          </div>
+          <div class="pillar-foot"><span class="eyebrow">Heirloom Longevity</span><img alt="" src="https://www.figma.com/api/mcp/asset/4f95825a-c453-468e-ae5a-0ba1b960a796.svg" /></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. EXPERIENCE & EXPERTISE -->
+  <section class="section">
+    <div class="container">
+      <div class="split-grid">
+        <div class="exp-text">
+          <span class="eyebrow">02 / Craftsmanship & Mastery</span>
+          <h2 class="h2">Experience That Builds Confidence.<em>Quality That Stands the Test of Time.</em></h2>
+          <p>Building a home is one of life’s biggest investments. It deserves more than just construction — it deserves careful planning, the right expertise, and a team that understands your expectations.</p>
+          <p>At VK GROUPS, we approach every home with a commitment to quality workmanship, thoughtful execution, and attention to detail. From the first foundation to the final finishing touches, we focus on creating homes that combine beauty, comfort, and lasting value.</p>
+
+          <div class="tiles">
+            <div class="tile">
+              <div class="num">01</div>
+              <div class="h4">Careful Project Planning</div>
+              <p class="small">Precise timeline milestones, structural audits, and seamless permit coordination.</p>
+            </div>
+            <div class="tile">
+              <div class="num">02</div>
+              <div class="h4">Quality-Focused Construction</div>
+              <p class="small">Certified grade concrete, non-porous exterior stone, and anti-efflorescence compounds.</p>
+            </div>
+            <div class="tile">
+              <div class="num">03</div>
+              <div class="h4">Attention to Every Detail</div>
+              <p class="small">Custom joinery, concealed plumbing lines, and architectural lighting niches.</p>
+            </div>
+            <div class="tile">
+              <div class="num">04</div>
+              <div class="h4">Client-Focused Approach</div>
+              <p class="small">Single dedicated point of contact with weekly digital progress documentation.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="exp-image">
+          <div class="frame">
+            <img alt="VK GROUPS senior architects and engineers collaborating over blueprints" src="https://www.figma.com/api/mcp/asset/66c40367-97a2-49d9-82c2-c5e57f450bb1.png" />
+          </div>
+          <div class="badge">
+            <div class="badge-top">
+              <img alt="" src="https://www.figma.com/api/mcp/asset/60354a89-68d5-4ce5-b9e5-088c4d8029b6.svg" />
+              <span>Integrity & Rigor</span>
+            </div>
+            <h4>Over a Decade of Master Craftsmanship in Cape Comorin</h4>
+            <p>Specialized in soil engineering, structural concrete, and coastal microclimate design across South Tamil Nadu.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. CURATED PORTFOLIO -->
+  <section class="section-alt" id="projects">
+    <div class="container">
+      <div class="split-head">
+        <div class="left">
+          <span class="eyebrow">03 / Curated Portfolio</span>
+          <h2 class="h2">Dreams Turned Into<em>Beautiful Homes.</em></h2>
+        </div>
+        <div class="right" style="max-width:512px">
+          <p>Behind every completed project is a vision brought to life. Our completed homes reflect the importance of thoughtful planning, quality craftsmanship, and attention to the little details that make a house feel special.</p>
+        </div>
+      </div>
+
+      <div class="projects">
+        <article class="project">
+          <div>
+            <div class="project-img">
+              <img alt="Modern Family Residence elevation in Kanyakumari featuring teak louvers and cantilevered balconies" src="https://www.figma.com/api/mcp/asset/16d7cbfb-afd4-4c58-a9c9-d75c86a4a6c5.png" />
+              <span class="chip-completed">Completed</span>
+            </div>
+            <div class="project-body">
+              <div class="loc"><img alt="" src="https://www.figma.com/api/mcp/asset/9fb90d01-fb16-4fb4-bb3f-9eea744badc4.svg" /><span class="eyebrow">Kanyakumari, TN</span></div>
+              <h3 class="h3" style="margin-top:8px">Modern Family Residence</h3>
+              <p class="small" style="margin:4px 0 16px">A thoughtfully designed home that brings together comfort, functionality, and contemporary elegance with bespoke cantilevered terraces.</p>
+              <div class="tags"><span>Teak Louvers</span><span>Courtyard Integration</span><span>G+1 Concrete</span></div>
+            </div>
+          </div>
+          <a href="#" class="view-link">View residence details <img alt="" src="https://www.figma.com/api/mcp/asset/004b02c3-ac63-463b-8679-671e49324c91.svg" /></a>
+        </article>
+
+        <article class="project">
+          <div>
+            <div class="project-img">
+              <img alt="Contemporary Dream Home estate with sunken deck and expansive double-height glass" src="https://www.figma.com/api/mcp/asset/80a3211f-8abe-4f38-82b0-7db34be310b0.png" />
+              <span class="chip-completed">Completed</span>
+            </div>
+            <div class="project-body">
+              <div class="loc"><img alt="" src="https://www.figma.com/api/mcp/asset/9fb90d01-fb16-4fb4-bb3f-9eea744badc4.svg" /><span class="eyebrow">Nagercoil Region, TN</span></div>
+              <h3 class="h3" style="margin-top:8px">Contemporary Dream Home</h3>
+              <p class="small" style="margin:4px 0 16px">A beautiful balance of modern architecture, inviting spaces, and refined finishing featuring a seamless outdoor reflection lounge.</p>
+              <div class="tags"><span>Double-Height Glass</span><span>Sunken Deck</span><span>Water Feature</span></div>
+            </div>
+          </div>
+          <a href="#" class="view-link">View residence details <img alt="" src="https://www.figma.com/api/mcp/asset/004b02c3-ac63-463b-8679-671e49324c91.svg" /></a>
+        </article>
+
+        <article class="project">
+          <div>
+            <div class="project-img">
+              <img alt="Elegant Residential Living villa with illuminated lap pool at sunset in Cape Coastline" src="https://www.figma.com/api/mcp/asset/7de9645a-dca7-47dc-be61-17cdcd205e93.png" />
+              <span class="chip-completed">Completed</span>
+            </div>
+            <div class="project-body">
+              <div class="loc"><img alt="" src="https://www.figma.com/api/mcp/asset/9fb90d01-fb16-4fb4-bb3f-9eea744badc4.svg" /><span class="eyebrow">Cape Coastline, TN</span></div>
+              <h3 class="h3" style="margin-top:8px">Elegant Residential Living</h3>
+              <p class="small" style="margin:4px 0 16px">Designed with everyday comfort in mind, bringing style and practicality together with lush tropical landscaping and custom pool pavilion.</p>
+              <div class="tags"><span>Reflecting Pool</span><span>Tropical Shading</span><span>Private Lawn</span></div>
+            </div>
+          </div>
+          <a href="#" class="view-link">View residence details <img alt="" src="https://www.figma.com/api/mcp/asset/004b02c3-ac63-463b-8679-671e49324c91.svg" /></a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. ONGOING PROJECTS -->
+  <section class="section">
+    <div class="container">
+      <div class="ongoing">
+        <div class="left">
+          <span class="eyebrow">04 / Under Construction</span>
+          <h2 class="h2">New Foundations.<br />New Dreams.<em>New Beginnings.</em></h2>
+          <p>Every new project marks the beginning of another family’s dream. Our ongoing construction projects reflect our continued commitment to careful execution, quality workmanship, and bringing every vision closer to reality. From structural development to the finer stages of construction, every step receives the attention it deserves.</p>
+
+          <div class="checks">
+            <div class="check">
+              <img alt="" src="https://www.figma.com/api/mcp/asset/b5d78649-050b-436a-b038-1743bbc3a665.svg" />
+              <div>
+                <div class="h4">Structural Grade Compliance</div>
+                <p class="small">M25/M30 grade concrete certified with seismic dampening joints and anti-corrosive rebars.</p>
+              </div>
+            </div>
+            <div class="check">
+              <img alt="" src="https://www.figma.com/api/mcp/asset/43ead0a6-3aa3-4c17-b086-1769061cc425.svg" />
+              <div>
+                <div class="h4">Digital Site Auditing</div>
+                <p class="small">Strict compliance checks on curing periods, formwork alignment, and waterproofing membrane layers.</p>
+              </div>
+            </div>
+          </div>
+
+          <a href="#projects" class="btn btn-black">Explore our ongoing projects
+            <img class="ico12" alt="" src="https://www.figma.com/api/mcp/asset/f30af5b7-3473-40ac-a6c3-0a85e0b3c097.svg" />
+          </a>
+        </div>
+
+        <div class="progress-card">
+          <div class="progress-img">
+            <img alt="Active reinforced concrete superstructure construction in progress with engineers on site" src="https://www.figma.com/api/mcp/asset/502c7ff1-53e1-45b7-87ac-160b73f51502.png" />
+            <div class="live-tag"><i></i><span>Active site inspection</span></div>
+            <div class="milestone">
+              <div>
+                <div class="lbl">Project milestone</div>
+                <div class="name">Phase 2: Precision Superstructure Framing</div>
+              </div>
+              <div class="pct">
+                <b>68%</b>
+                <span>Structural progress</span>
+              </div>
+            </div>
+          </div>
+          <div class="progress-meta">
+            <div class="row">
+              <h3 class="h3">The Palms Luxury Residence</h3>
+              <span class="loc-label">Kanyakumari Region</span>
+            </div>
+            <p class="small">Featuring structural grade M25 concrete beams, customized shuttering formwork, and cantilevered balcony slabs engineered for unobstructed coastal vistas.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. WHY CHOOSE VK GROUPS -->
+  <section class="dark">
+    <div class="glow tr"></div>
+    <div class="glow bl"></div>
+    <div class="container">
+      <div class="dark-head">
+        <span class="eyebrow">05 / The VK GROUPS Difference</span>
+        <h2 class="h2">Why Your Dream Home<em>Deserves VK GROUPS.</em></h2>
+        <p>Choosing the right construction partner makes all the difference. At VK GROUPS, we understand that you’re not just investing in a building — you’re creating a place that will hold a lifetime of memories.</p>
+      </div>
+
+      <div class="bento">
+        <div class="feature">
+          <div class="ico"><img alt="" src="https://www.figma.com/api/mcp/asset/cd0878ad-ff60-44f8-bffe-156cf412af4a.svg" /></div>
+          <span class="eyebrow">Excellence 01</span>
+          <h3 class="h3">Quality Without Compromise</h3>
+          <p>We focus on quality materials and workmanship at every stage. We do not cut corners, ensuring structural longevity that withstands coastal elements.</p>
+        </div>
+        <div class="feature">
+          <div class="ico"><img alt="" src="https://www.figma.com/api/mcp/asset/5b84b79e-aad9-436b-8bdf-a6b0376591e1.svg" /></div>
+          <span class="eyebrow">Excellence 02</span>
+          <h3 class="h3">Thoughtful Design</h3>
+          <p>We value spaces that look beautiful and feel comfortable. Natural ventilation, intuitive sunlight, and proportion are calibrated for South Indian life.</p>
+        </div>
+        <div class="feature">
+          <div class="ico"><img alt="" src="https://www.figma.com/api/mcp/asset/e6878fdc-c894-4d65-a522-2261134696ea.svg" /></div>
+          <span class="eyebrow">Excellence 03</span>
+          <h3 class="h3">Attention to Detail</h3>
+          <p>Every element matters, from the foundation to the finishing. From door clearances to hidden downspouts, precision execution defines our legacy.</p>
+        </div>
+        <div class="feature">
+          <div class="ico"><img alt="" src="https://www.figma.com/api/mcp/asset/7d77c2a4-dcc2-4f16-8dd0-0365e6ba2e2f.svg" /></div>
+          <span class="eyebrow">Excellence 04</span>
+          <h3 class="h3">Client-Focused Service</h3>
+          <p>Your ideas, expectations, and satisfaction remain important throughout the journey. We treat every client’s dream with profound empathy and respect.</p>
+        </div>
+        <div class="feature wide">
+          <div>
+            <div class="ico"><img alt="" src="https://www.figma.com/api/mcp/asset/35eeb03d-e6a3-42ed-8b14-91e919b1018e.svg" /></div>
+            <span class="eyebrow">Excellence 05</span>
+            <h3 class="h3">Lasting Value</h3>
+            <p>We aim to create homes that remain beautiful, functional, and meaningful for years to come. An estate by VK GROUPS is an investment built to pass forward to future generations with pride.</p>
+          </div>
+          <div class="foot"><span>Built for generations</span><i></i><span>Estates of Cape Comorin</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. CTA HERO -->
+  <section class="cta-hero">
+    <div class="bg"><img alt="" src="https://www.figma.com/api/mcp/asset/7de9645a-dca7-47dc-be61-17cdcd205e93.png" /></div>
+    <div class="overlay"></div>
+    <div class="cta-inner">
+      <div class="tag"><span>Let’s build something beautiful</span></div>
+      <h2>Your Dream Home Is<em>Closer Than You Think.</em></h2>
+      <p>Every remarkable home starts with a conversation. Whether you have a clear vision or are just beginning to explore your ideas, we’re here to help you take the first step. Let’s discuss your plans and turn your dream of owning a beautiful home into reality.</p>
+      <div class="cta-row">
+        <a href="#contact" class="btn btn-gold">
+          <img class="ico12" alt="" src="https://www.figma.com/api/mcp/asset/ffa010fd-335d-4f47-ac0d-c5688cce4cfc.svg" style="width:15px;height:13.3px" />
+          Discuss your project
+        </a>
+        <a href="tel:+91" class="btn btn-glass-strong">
+          <img class="ico12" alt="" src="https://www.figma.com/api/mcp/asset/50dfafd3-5694-4878-94c5-f910dbfda8e6.svg" style="width:15px;height:15px" />
+          Call us today
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8. LOCATION -->
+  <section class="section-alt">
+    <div class="container">
+      <div class="loc-grid">
+        <div>
+          <span class="eyebrow">06 / Geographic Roots</span>
+          <h2 class="h2">Rooted in Kanyakumari.<em>Building Dreams Across Tamil Nadu.</em></h2>
+          <p>VK GROUPS is based in Kanyakumari, Tamil Nadu, with a passion for creating homes that reflect quality, comfort, and timeless design. Have a project in mind? Get in touch with our team and let’s discuss how we can bring your vision to life.</p>
+          <div class="hubs">
+            <div class="hub">
+              <img alt="" src="https://www.figma.com/api/mcp/asset/e458ad94-6023-49fd-a5f7-7f3ddc6d5bff.svg" />
+              <div class="h4">Kanyakumari</div>
+              <p class="small">Central Atelier &amp; Head Office</p>
+            </div>
+            <div class="hub">
+              <img alt="" src="https://www.figma.com/api/mcp/asset/2cc80e11-bbbf-4f2e-9996-995f37f17d35.svg" />
+              <div class="h4">Nagercoil</div>
+              <p class="small">Urban Residential Hub</p>
+            </div>
+            <div class="hub">
+              <img alt="" src="https://www.figma.com/api/mcp/asset/cc1196af-4749-40b0-85f3-00f88d62dfaa.svg" />
+              <div class="h4">Cape Coastline</div>
+              <p class="small">Luxury Coastal Enclaves</p>
+            </div>
+            <div class="hub">
+              <img alt="" src="https://www.figma.com/api/mcp/asset/1ae366c5-e424-4e91-b1e3-cd47c28efc7d.svg" />
+              <div class="h4">South Tamil Nadu</div>
+              <p class="small">Tirunelveli &amp; Extended Radius</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="map-card">
+          <div class="map">
+            <img alt="Map of Kanyakumari, Tamil Nadu" src="https://www.figma.com/api/mcp/asset/8b5c2b78-86b8-457d-b899-e9b261d0cd4d.png" />
+            <div class="map-pin">
+              <div class="lbl">
+                <img alt="" src="https://www.figma.com/api/mcp/asset/07c4b64f-a81f-43e2-8736-c28abde9b6ec.svg" />
+                <span>Headquarters</span>
+              </div>
+              <h4>VK Towers, Beach Road</h4>
+              <p>Kanyakumari, Tamil Nadu, 629702</p>
+            </div>
+          </div>
+          <div class="map-meta">
+            <span>Latitude 8.0883° N • Longitude 77.5385° E</span>
+            <span class="cape">Cape Comorin</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 9. CONTACT FORM (3 fields: name, email, phone) -->
+  <section class="form-section" id="contact">
+    <div class="form-card">
+      <div class="form-head">
+        <span class="eyebrow">Start your journey</span>
+        <h2 class="h2">Let's Start Building Your<br />Dream.</h2>
+        <p>A few details are all it takes to begin. Share your requirements with us, and let's take the first step towards your dream home.</p>
+      </div>
+
+      <form id="enquiryForm" novalidate>
+        <div class="fields">
+          <div class="field">
+            <label for="name">Full Name *</label>
+            <input id="name" name="name" type="text" placeholder="e.g. S. Ramanathan" required />
+          </div>
+          <div class="field">
+            <label for="phone">Mobile Number (+91) *</label>
+            <input id="phone" name="phone" type="tel" placeholder="+91 94430 00000" required />
+          </div>
+          <div class="field full">
+            <label for="email">Email Address *</label>
+            <input id="email" name="email" type="email" placeholder="you@example.com" required />
+          </div>
+        </div>
+
+        <div class="form-foot">
+          <div class="privacy">
+            <img alt="" src="https://www.figma.com/api/mcp/asset/81af4e11-e342-446f-8110-19bd7f2a1c9c.svg" />
+            Your privacy and plot details are strictly confidential.
+          </div>
+          <button type="submit" class="submit" id="submitBtn">
+            Send Enquiry
+            <img alt="" src="https://www.figma.com/api/mcp/asset/afaaa87a-1dc4-407a-9ae7-09900edfbb78.svg" />
+          </button>
+        </div>
+        <div class="status" id="status" role="status" aria-live="polite"></div>
+      </form>
+    </div>
+  </section>
+
+  <footer><strong>VK GROUPS</strong> • Premium House Construction • Kanyakumari, Tamil Nadu</footer>
+
+  <script>
+    const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxTsJY-KdrdCGm_bnECuBaBzwddWN07SD5xVf9WCGfL46lQPDMvBIc1pGKnae5r4Jwk/exec";
+
+    const form = document.getElementById("enquiryForm");
+    const submitBtn = document.getElementById("submitBtn");
+    const statusEl = document.getElementById("status");
+
+    function showSuccess() {
+      statusEl.className = "status ok";
+      statusEl.textContent = "Thank you! Our team will contact you shortly.";
+      form.reset();
+      submitBtn.disabled = false;
+    }
+
+    function showError() {
+      statusEl.className = "status err";
+      statusEl.textContent = "Something went wrong. Please try again.";
+      submitBtn.disabled = false;
+    }
+
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      const name = document.getElementById("name").value.trim();
+      const email = document.getElementById("email").value.trim();
+      const phone = document.getElementById("phone").value.trim();
+
+      if (!name || !email || !phone) {
+        statusEl.className = "status err";
+        statusEl.textContent = "Please fill in name, email and phone.";
+        return;
+      }
+
+      statusEl.textContent = "";
+      submitBtn.disabled = true;
+
+      const url = SCRIPT_URL + "?" + new URLSearchParams({ name, email, phone });
+
+      fetch(url, { method: "GET", mode: "no-cors" })
+        .then(() => showSuccess())
+        .catch(() => showError());
+    });
+  </script>
+</body>
+</html>
